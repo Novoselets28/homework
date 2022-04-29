@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novoselets</title>
+</head>
+<body>
+    <h1>Homework</h1>
+    <h2>1.</h2>
+    <p>let firstNumber;<br>
+        firstNumber = 5;<br>
+        let secondNumber = firstNumber * 3;<br>
+        let thirdNumber = firstNumber + secondNumber;<br>
+        console.log(firstNumber, secondNumber, thirdNumber);</p>
+    <h2>2.</h2>
+    <p>
+        const firstName = prompt('Имя', '')<br>
+        const lastName = prompt('Фамилия', '')<br>
+        alert(`What's up ${firstName} ${lastName}`)</p>
+    <h2>3.</h2>
+    <p>let x = prompt('Первое число:','');<br>
+        let y = prompt('Второе число','');<br>
+        alert(+x * +y);<br>
+        alert(+x / +y);<br>
+        alert(+x + +y);<br>
+        alert(+x - +y))</p>
+    <h2>4.</h2>
+    <p>
+        let hours = prompt('Количество рабочих часов:', '');<br>
+        let workDay = prompt('Количество рабочих дней','');<br>
+        let rate = prompt('Рейт за час','');<br>
+        let sallary = (+hours * +workDay * +rate)<br>
+    </p>
+    <h2>5.</h2>
+    <p>
+        let a = prompt('Это число?','');<br>
+        if(typeof (1*a) == 'number') {<br>
+            alert("Да, это число");<br>
+        } else {<br>
+            alert("Нет, это не число")<br>
+        }
+    </p>
+    <h2>6.</h2>
+    <p>
+        let f = +prompt('Введите число:','');<br>
+        if( f%2 == 0) {<br>
+            alert("Это чётное число");<br>
+        } else {<br>
+            alert("Это число нечётное")<br>
+        }
+    </p>
+    <h2>7.</h2>
+    <p>
+        let num1 = Math.round((Math.random() * 100));<br>
+        let num2 = +prompt('Введите число:','');<br>
+        if(num1<num2){<br>
+            alert('num1 меньше num2')<br>
+        }<br>
+        else {<br>
+            alert('num1 больше num2')<br>
+        }<br>
+        alert(num1);<br>
+        alert(num2)<br>
+    </p>
+    <h2>8.</h2>
+    <p>
+        let str = prompt('Введите "Мне нравится изучать Front-end":','');<br>
+        let str2 = prompt('Что именно нравится изучать?','');<br>
+        str.includes("html");<br>
+        let strNew = str.slice(0,20);<br>
+        let result = strNew.concat(str2);<br>
+        alert(result)
+    </p>
+    <script src="script.js"></script>
+</body>
+</html>
