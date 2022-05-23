@@ -1,10 +1,13 @@
-// let arr = [1, 2, 3, 'a', 'b', 'c', '4', '5', '6'];
-// let sum = arr.reduce(function(previousValue, item) {
-//     if(!isNaN(+item)) return previousValue + +item;
-//     return previousValue;
-// }, 0);
+let arr = [1, 2, 3, 'a', 'b', 'c', '4', '5', '6'];
+let sum = arr.reduce(function(previousValue, item) {
+    if(!isNaN(+item)) {
+    return previousValue + +item;
+    } else {
+        return previousValue;
+    }
+}, 0);
 
-// console.log(sum);
+console.log(sum);
 
 // const arr = ['AngularJS', 'jQuery'];
 // arr.unshift('Backbone.js');
@@ -20,10 +23,10 @@
 
 // let str = 'Как однажды Жак звонарь сломал фонарь головой';
 // let arr = str.split(' ');
-// let helper = arr.pop();
+// let lastWord = arr.pop();
 
 
-// arr.splice(arr.indexOf('звонарь'), 0, arr.splice(arr.indexOf('однажды'), 1),arr.splice(arr.indexOf('сломал'),1), helper.toString())
+// arr.splice(arr.indexOf('звонарь'), 0, arr.splice(arr.indexOf('однажды'), 1),arr.splice(arr.indexOf('сломал'),1), lastWord.toString())
 // str = arr.join(' ');
 
 // alert(str);
@@ -61,8 +64,8 @@ phone.model = prompt("Введите модель","");
 phone.resolution = prompt("Введите расширение","");
 phone.color = prompt("Введите цвет телефона","");
 
-user= Object.assign(phone); 
-// || user.phone=phone; 
+// user= Object.assign(phone); тогда user не массив
+user.phone=phone; 
 console.log(user);
 
 
@@ -73,42 +76,28 @@ console.log(user);
 
 
 let arr = [];
-
-for(let i=0;i<10;i++) {
-    let userNumber = prompt('Введите число')
-    arr.push(userNumber);
+let sum = 0;
+for (let i = 0; i < 10; i++) {
+    let userNumnber = +prompt("Введите число", "");
+    arr.push(userNumnber);
 }
-let rezu = arr.reduce(function(previousValue, userNumber) {
-    if(!isNaN(+userNumber)) 
-    return previousValue + +userNumber;
-    return previousValue;
-}, 0);
-alert(rezu)
 
-// let allSymbol = [];
-// let sumNumb = 0;
-// for (let i = 0; i < 7; i++) {
-//     let anyNumnber = +prompt(" Enter any number", "");
-//     allSymbol.push(anyNumnber);
-// }
-
-// for (let i = 0; i < allSymbol.length; i++) {
-//     let result = +allSymbol[i];
-//     if (!isNaN(result)) {
-//         sumNumb = sumNumb + result;
-//     }
-// }
-// alert(sumNumb);
+for (let i = 0; i < arr.length; i++) {
+    let result = +arr[i];
+    if (!isNaN(result)) {
+        sum = sum + result;
+    }
+}
+alert(sum);
 
 
 
 // Используя вложенные циклы, сформируйте двумерный массив, содержащий таблицу умножения - (задача со звездочкой)
-// let umnozg = [];
-let umnozg = [];
+let multipleTable = new Array(10).fill('').map( () => Array(6).fill(''))
 for(let a=0; a < 10; a++){
         for(let b=0; b < 10;b++){
-            umnozg[a][b]=`${b+1}x${a+1}=${(a+1)*(b+1)}`;
+            multipleTable[a][b]=`${b+1}x${a+1}=${(a+1)*(b+1)}`;
         }
     }
-    console.log(umnozg)
+    console.log(multipleTable)
 
